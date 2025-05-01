@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Avaliações - v4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Avaliações - v4</h1>
+
+    <form id="formulario">
+      <textarea id="enunciado" placeholder="Digite o enunciado da questão" oninput="atualizarPrevia()"></textarea>
+      <input type="text" id="altA" placeholder="Alternativa A" oninput="atualizarPrevia()">
+      <input type="text" id="altB" placeholder="Alternativa B" oninput="atualizarPrevia()">
+      <input type="text" id="altC" placeholder="Alternativa C" oninput="atualizarPrevia()">
+      <input type="text" id="altD" placeholder="Alternativa D" oninput="atualizarPrevia()">
+      <input type="text" id="altE" placeholder="Alternativa E" oninput="atualizarPrevia()">
+
+      <div class="botoes">
+        <button type="button" onclick="salvarQuestao()">Salvar</button>
+        <button type="button" onclick="cancelarEdicao()">Cancelar</button>
+      </div>
+    </form>
+
+    <div class="acoes">
+      <input type="text" id="nomeArquivo" placeholder="Nome do arquivo">
+      <button onclick="gerarVersoesPDF()">Gerar PDF</button>
+      <button onclick="baixarJSON()">Baixar JSON</button>
+      <input type="file" id="importarJSON" accept=".json" onchange="importarQuestoes(event)">
+    </div>
+
+    <div class="previa">
+      <h2>Pré-visualização</h2>
+      <div id="previewQuestao"><em>Digite o enunciado e as alternativas para ver a pré-visualização...</em></div>
+    </div>
+
+    <ul id="listaQuestoes"></ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

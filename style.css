@@ -1,0 +1,104 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form, .acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+textarea, input[type="text"] {
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+}
+
+textarea {
+  height: 80px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: #2979ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #2a2a2a;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+li button {
+  background: #ff9800;
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.previa {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.previa h2 {
+  margin-bottom: 10px;
+  color: #03dac5;
+}
+
+#previewQuestao {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
